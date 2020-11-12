@@ -1,0 +1,10 @@
+name: ShutUp
+main: fr.freebuild.shutup.ShutUp
+version: ${project.version}
+authors: [zedentox, Epicanard]
+commands:
+  shutup:
+    description: Used to reload plugin configuration
+permissions:
+  shutup:
+    description: Can't talk in chat if set

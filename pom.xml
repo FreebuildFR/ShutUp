@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.freebuild</groupId>
   <artifactId>shutup</artifactId>
-  <version>0.4</version>
+  <version>0.5</version>
   <name>ShutUp</name>
   <description>Plugin to prevent player to speak in chat</description>
 

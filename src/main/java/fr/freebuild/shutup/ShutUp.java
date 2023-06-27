@@ -48,14 +48,14 @@ public class ShutUp extends JavaPlugin implements Listener {
     return false;
   }
 
-  @EventHandler(priority=EventPriority.LOW)
+  @EventHandler(priority=EventPriority.HIGH)
   public void onPlayerSendChatMessage(final AsyncPlayerChatEvent event) {
     this.logger.debug("Player trying to send message in chat");
     final Player player = event.getPlayer();
 
     if (player != null && player.hasPermission("shutup") && !player.isOp()) {
       this.logger.debug("The player is not allowed to send message in chat");
-      event.setMessage(null);
+      event.getRecipients().clear();
       event.setCancelled(true);
       player.sendMessage(ChatColor.RED + this.getConfig().getString("message", "Not allowed"));
     }
